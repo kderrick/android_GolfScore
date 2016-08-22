@@ -54,24 +54,24 @@ public class ListAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.holeLabelTextView.setText(mHoles[position].getmLabel());
-        holder.strokeCountTextView.setText(mHoles[position].getmStrokeCount());
+        holder.holeLabelTextView.setText(mHoles[position].getLabel());
+        holder.strokeCountTextView.setText(mHoles[position].getStrokeCount() + "");
         holder.removeStrokeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int upDatedStrokeCount = mHoles[position].getmStrokeCount() - 1;
+                int upDatedStrokeCount = mHoles[position].getStrokeCount() - 1;
                 if(upDatedStrokeCount < 0) {
                     upDatedStrokeCount = 0;
                 }
-                mHoles[position].setmStrokeCount(upDatedStrokeCount);
+                mHoles[position].setStrokeCount(upDatedStrokeCount);
                 holder.strokeCountTextView.setText(upDatedStrokeCount + "");
             }
         });
         holder.addStrokeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int upDatedStrokeCount = mHoles[position].getmStrokeCount() + 1;
-                mHoles[position].setmStrokeCount(upDatedStrokeCount);
+                int upDatedStrokeCount = mHoles[position].getStrokeCount() + 1;
+                mHoles[position].setStrokeCount(upDatedStrokeCount);
                 holder.strokeCountTextView.setText(upDatedStrokeCount + "");
 
             }
