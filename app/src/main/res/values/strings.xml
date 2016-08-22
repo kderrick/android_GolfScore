@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">GolfScore</string>
-    <string name="action_clear_strokes">clear_strokes</string>
+    <string name="action_clear_strokes">Clear Strokes</string>
 </resources>

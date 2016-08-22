@@ -63,6 +63,12 @@ public class MainActivity extends ListActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_clear_strokes) {
+            mEditor.clear();
+            mEditor.apply();
+
+            for(Hole hole : mHoles) {
+                hole.setStrokeCount(0);
+            }
 
             return true;
         }
