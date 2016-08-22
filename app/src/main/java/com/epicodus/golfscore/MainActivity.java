@@ -69,6 +69,7 @@ public class MainActivity extends ListActivity {
             for(Hole hole : mHoles) {
                 hole.setStrokeCount(0);
             }
+            mListAdapter.notifyDataSetChanged();
 
             return true;
         }
